@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="Huiswerkopgave_les25.css">
+  <title>Keuzes</title>
+  <script src="http://code.jquery.com/jquery-3.1.0.min.js">
+  </script>
+  <script>
+      function checkButton() {
+        if(document.getElementById('bluecolor').checked && document.getElementById('bluephrase').checked) {
+          window.alert("Juiste antwoord!");
+        } else if(document.getElementById('purplecolor').checked && document.getElementById('purplephrase').checked) {
+          window.alert("Juiste antwoord!");
+        } else if(document.getElementById('greencolor').checked && document.getElementById('greenphrase').checked) {
+          window.alert("Juiste antwoord!");
+        } else {
+          window.alert("Foute antwoord!");
+        }
+      }
+  </script>
+</head>
+<body>
+  <h1>Game</h1>
+  <div class="colors">
+    <h2>Welke kleur ...</h2>
+    <input type="radio" id="bluecolor" name="colorbutton" value="Blauwe knop">
+    <label for="bluecolor" id="blue">Blauwe knop</label><br>
+    <input type="radio" id="purplecolor" name="colorbutton" value="Paarse knop">
+    <label for="purplecolor" id="purple">Paarse knop</label><br>
+    <input type="radio" id="greencolor" name="colorbutton" value="Groene knop">
+    <label for="greencolor" id="green">Groene knop</label>
+  </div>
+  <div class="phrases">
+    <h2>... behoord tot welke zin?</h2>
+    <input type="radio" id="purplephrase" name="colorphrase" value="Viooltjes hebben welke kleur?">
+    <label for="purplephrase">Viooltjes hebben welke kleur</label><br>
+    <input type="radio" id="greenphrase" name="colorphrase" value="Het gras is ...">
+    <label for="greenphrase">Het gras is ...</label><br>
+    <input type="radio" id="bluephrase" name="colorphrase" value="Wat hebben hemel en oceaan gemeen?">
+    <label for="bluephrase">Wat hebben hemel en oceaan gemeen?</label>
+  </div>
+  <div>
+    <h3>Selecteer de juiste antwoord en verzend ze.</h3>
+    <button type="button" onclick="checkButton()">Verzenden</button>
+  </div>
+  <noscript>
+  Om deze website optimaal te gebruiken is het noodzakelijk om JavaScript te activeren.
+  </noscript>
+</body>
+</html>
